@@ -1,0 +1,40 @@
+.populationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: #68f3d0;
+}
+
+.lineChartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lineChartForMobile {
+  display: none;
+}
+
+@media (max-width: 786px) {
+  .populationContainer {
+    width: 98%;
+  }
+  .lineChartForMobile {
+    display: block;
+  }
+
+  .lineChartContainer {
+    width: 100%;
+  }
+
+  .lineChartForWeb {
+    display: none;
+  }
+}

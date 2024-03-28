@@ -1,0 +1,44 @@
+.homeFullContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  overflow: auto;
+  flex-direction: column;
+  width: 100%;
+}
+
+.homeAndGraphContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.homeCard {
+  background-color: rgb(251, 150, 120);
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  min-height: 350px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 786px) {
+  .homeFullContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homeAndGraphContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+}

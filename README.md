@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+Write the objective of the assignment yourself
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This is a assignment project .
+- In this application where we can the great UI
+- graph of population
+- data about the Crypto currency
 
-## Available Scripts
+### Set Up Instructions
 
-In the project directory, you can run:
+<details>
+<summary>Click to view</summary>
 
-### `npm start`
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Assignment Completion Checklist
 
-### `npm test`
+<details>
+<summary>Click to view</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Along with the below points, add your checklist specific to the assignment**
 
-### `npm run build`
+- Read the instructions given in the assignment carefully and list down the **Assignment Completion Checklist** for the assignment and start working on it
+- The completion Checklist includes the below-mentioned points
+  - I have completed all the functionalities .
+  - I have used only the resources (React.js, Bootstrap, APIs, third-party packages...) in the assignment
+  - I have modified the README.md file based on my project instructions
+  -
+- </details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Quick Tips
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Click to view</summary>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<summary>Client Side</summary>
+-"react"
+- "react-router-dom"
+- "react-loader-spinner"
+- "react-icons"
+- "recharts"
+- "web3"
 
-### `npm run eject`
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Resources
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+<summary>Data Fetch URLs</summary>
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- "https://datausa.io/api/data?drilldowns=Nation&measures=Population"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- "https://api.coindesk.com/v1/bpi/currentprice.json"
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<details>
+<summary>Image icons</summary>
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- FaBitcoin
+- FaEthereum
+- SiDogecoin
+- GiHamburgerMenu
+- SiHiveBlockchain
+- FaHome
+- SlGraph
+- MdOutlineWebAsset
 
-### Code Splitting
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<details>
+<summary>Colors</summary>
+<br/>
 
-### Analyzing the Bundle Size
+- "#f0f1f2"
+- "#0d6efd"
+- "red"
+- "#696969"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>

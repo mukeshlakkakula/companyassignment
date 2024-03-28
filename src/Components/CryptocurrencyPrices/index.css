@@ -1,0 +1,52 @@
+.cards {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.cryptoViewContainer {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  min-width: 100%;
+}
+
+.cryptoFullContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.bitCoinContainer {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+.symbolBtnCr {
+  padding: 10px;
+  width: 60px;
+
+  border-radius: 45px;
+  color: rgb(222, 193, 33);
+  font-size: 30px;
+  background-color: rgb(21, 19, 6);
+}
+
+@media (max-width: 786px) {
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
