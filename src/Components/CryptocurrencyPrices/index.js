@@ -21,7 +21,7 @@ const Cryptocurrency = () => {
     let url = "https://api.coindesk.com/v1/bpi/currentprice.json";
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data, cryptoData);
+   
     if (response.ok) {
       setApiStatus(apiStatusConstants.success);
       setcrytpoData(data.bpi);
@@ -30,14 +30,14 @@ const Cryptocurrency = () => {
       setApiStatus(apiStatusConstants.failure);
     }
   };
-  console.log(cryptoData, "crp");
+
 
   useEffect(() => {
     fetchCryptoData();
   }, []);
 
   let cryptoView = <div>Cripto</div>;
-  console.log(cryptoData.EUR, "eur");
+ 
   if (cryptoData.EUR !== undefined) {
     cryptoView = (
       <div>
