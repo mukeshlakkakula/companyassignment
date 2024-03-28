@@ -28,7 +28,7 @@ const PopulationGraph = () => {
       "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
     const response = await fetch(url);
     const data = await response.json();
-    console.log("dt", data);
+  
     if (response.ok) {
       setApiStatus(apiStatusConstants.success);
       setPopulationData(data.data);
@@ -36,7 +36,7 @@ const PopulationGraph = () => {
       setApiStatus(apiStatusConstants.failure);
     }
   };
-  console.log("pop", populationData);
+ 
   useEffect(() => {
     fetchData();
   }, []);
