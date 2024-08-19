@@ -21,7 +21,7 @@ const Cryptocurrency = () => {
     let url = "https://api.coindesk.com/v1/bpi/currentprice.json";
     const response = await fetch(url);
     const data = await response.json();
-   
+
     if (response.ok) {
       setApiStatus(apiStatusConstants.success);
       setcrytpoData(data.bpi);
@@ -31,13 +31,12 @@ const Cryptocurrency = () => {
     }
   };
 
-
   useEffect(() => {
     fetchCryptoData();
   }, []);
 
   let cryptoView = <div>Cripto</div>;
- 
+
   if (cryptoData.EUR !== undefined) {
     cryptoView = (
       <div>
@@ -73,7 +72,11 @@ const Cryptocurrency = () => {
       break;
 
     case apiStatusConstants.inProgress:
-      resultView = <RotatingLines />;
+      resultView = (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <RotatingLines />
+        </div>
+      );
       break;
     case apiStatusConstants.failure:
       resultView = <h1>Something went wrong Pleace try again ....</h1>;

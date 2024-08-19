@@ -28,7 +28,7 @@ const PopulationGraph = () => {
       "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
     const response = await fetch(url);
     const data = await response.json();
-  
+
     if (response.ok) {
       setApiStatus(apiStatusConstants.success);
       setPopulationData(data.data);
@@ -36,7 +36,7 @@ const PopulationGraph = () => {
       setApiStatus(apiStatusConstants.failure);
     }
   };
- 
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -45,8 +45,27 @@ const PopulationGraph = () => {
     <div className="lineChartContainer">
       <div className="lineChartForWeb">
         <LineChart
+          className="largeDiv"
           width={600}
           height={300}
+          data={populationData}
+          margin={{ top: 50, right: 30, left: 50, bottom: 5 }}
+        >
+          <Line
+            type="monotone"
+            dataKey="Population"
+            stroke="#ed5324"
+            strokeWidth={2}
+          />
+          <CartesianGrid stroke="#ccc" />
+          <XAxis dataKey="Year" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+        </LineChart>
+        <LineChart
+          className="smallDiv"
+          style={{ width: "100%" }}
           data={populationData}
           margin={{ top: 50, right: 30, left: 50, bottom: 5 }}
         >
@@ -65,7 +84,7 @@ const PopulationGraph = () => {
       </div>
       <div className="lineChartForMobile">
         <LineChart
-          width={330}
+          width={300}
           height={300}
           data={populationData}
           margin={{ top: 50, right: 30, left: 50, bottom: 5 }}
@@ -93,7 +112,11 @@ const PopulationGraph = () => {
       break;
 
     case apiStatusConstants.inProgress:
-      resultView = <RotatingLines />;
+      resultView = (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <RotatingLines />
+        </div>
+      );
       break;
     case apiStatusConstants.failure:
       resultView = <h1>Something went wrong Pleace try again ....</h1>;
@@ -106,7 +129,7 @@ const PopulationGraph = () => {
     <div className="populationContainer">
       <div>
         {resultView}
-        <h1>Population of United States</h1>
+        <h1 className="populationHeading">Population of United States</h1>
       </div>
     </div>
   );

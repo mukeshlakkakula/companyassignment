@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SiHiveBlockchain } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
 import { SlGraph } from "react-icons/sl";
-import { MdOutlineWebAsset } from "react-icons/md";
+
 import "./index.css";
 const Sidebar = () => {
+  const location = useLocation();
   const [activeRoute, setActiveRoute] = useState("home");
   const [activeSideBar, setActiveSidebar] = useState(true);
   let screenSizeOf = window.innerWidth;
@@ -28,7 +29,7 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div>
+      <div className="logoContainer">
         <button
           className="logoBurger"
           type="button"
@@ -41,13 +42,13 @@ const Sidebar = () => {
       <div
         className={activeSideBar ? "sidebarContainer" : "sidebarContainerNone"}
       >
-        <Link to="/">
+        <Link to="/" className="linked">
           <button
-            className={
-              activeRoute === "home"
+            className={`${
+              location.pathname === "/"
                 ? "activeBtn "
                 : "notActiveBtn hover-element"
-            }
+            } ${activeSideBar ? "activeSidebarbtn" : "noneSidebarBtn"}`}
             value="home"
             onClick={handleAll}
           >
@@ -55,13 +56,13 @@ const Sidebar = () => {
           </button>
         </Link>
 
-        <Link to="/cryptocurrency">
+        <Link to="/cryptocurrency" className="linked">
           <button
-            className={
-              activeRoute === "cryptocurrency"
-                ? "activeBtn"
+            className={`${
+              location.pathname === "/cryptocurrency"
+                ? "activeBtn "
                 : "notActiveBtn hover-element"
-            }
+            } ${activeSideBar ? "activeSidebarbtn" : "noneSidebarBtn"}`}
             value="cryptocurrency"
             onClick={handleAll}
           >
@@ -69,30 +70,17 @@ const Sidebar = () => {
           </button>
         </Link>
 
-        <Link to="/populationgraph">
+        <Link to="/populationgraph" className="linked">
           <button
-            className={
-              activeRoute === "populationgraph"
-                ? "activeBtn"
+            className={`${
+              location.pathname === "/populationgraph"
+                ? "activeBtn "
                 : "notActiveBtn hover-element"
-            }
+            } ${activeSideBar ? "activeSidebarbtn" : "noneSidebarBtn"}`}
             value="populationgraph"
             onClick={handleAll}
           >
             PopulationGraph <SlGraph />
-          </button>
-        </Link>
-        <Link to="/Web">
-          <button
-            className={
-              activeRoute === "Web"
-                ? "activeBtn "
-                : "notActiveBtn hover-element"
-            }
-            value="Web"
-            onClick={handleAll}
-          >
-            Web <MdOutlineWebAsset />
           </button>
         </Link>
       </div>

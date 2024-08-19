@@ -6,9 +6,18 @@
   width: 100%;
   padding: 20px;
   margin: 20px;
+  min-height: 95vh;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background-color: #68f3d0;
+}
+
+.largeDiv {
+  display: block;
+}
+
+.smallDiv {
+  display: none;
 }
 
 .lineChartContainer {
@@ -21,10 +30,26 @@
 .lineChartForMobile {
   display: none;
 }
+.populationHeading {
+  text-align: center;
+}
 
 @media (max-width: 786px) {
   .populationContainer {
-    width: 98%;
+    width: 85%;
+    min-height: auto;
+    margin-top: 25px;
+  }
+
+  .populationHeading {
+    font-size: 15px;
+  }
+  .smallDiv {
+    display: block;
+  }
+
+  .largeDiv {
+    display: none;
   }
   .lineChartForMobile {
     display: block;

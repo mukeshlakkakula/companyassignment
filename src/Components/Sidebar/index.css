@@ -8,11 +8,13 @@
   height: 100vh;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   width: 250px;
-  transition: width 2s;
+  transition: width 1s;
   overflow: auto;
-  margin-right: 10px;
+  margin-right: 3px;
 }
-
+.logoContainer {
+  width: 100%;
+}
 .logoBurger {
   display: flex;
   justify-content: flex-start;
@@ -26,8 +28,17 @@
 }
 
 .sidebarContainerNone {
+  width: 0px;
+  transition: width 1s;
+}
+
+.activeSidebarbtn {
+  display: block;
+  text-decoration: none;
+}
+
+.noneSidebarBtn {
   display: none;
-  transition: display 2s;
 }
 
 .hover-element:hover {
@@ -45,6 +56,7 @@
   min-width: 200px;
   padding: 10px;
   color: #fff;
+  text-decoration: none;
   border-radius: 10px;
   border-style: none;
 }
@@ -52,7 +64,12 @@
 .notActiveBtn {
   min-width: 200px;
   padding: 10px;
+  text-decoration: none;
 
   border-radius: 10px;
   border-style: none;
+}
+
+.linked {
+  text-decoration: none;
 }

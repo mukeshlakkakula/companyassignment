@@ -1,0 +1,17 @@
+.sphereDisplay02 {
+  display: none;
+}
+
+.sphereDisplay01 {
+  display: block;
+}
+
+@media (max-width: 786px) {
+  .sphereDisplay02 {
+    display: block;
+    height: 65vh;
+  }
+  .sphereDisplay01 {
+    display: none;
+  }
+}
